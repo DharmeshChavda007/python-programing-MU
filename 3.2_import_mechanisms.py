@@ -7,6 +7,10 @@ from calculator import add #this will only import the add funcaiton the rest of 
 
 print(add(80,90))
 
-import calculator as c # this will import the whole modual and every functions and can access the function using the alies name.
+import calculator  # this will import the whole modual and every functions
 
-print(c.sub(60,50))
+print(calculator.sub(60,50))
+
+import calculator as c # we can access the every funcaitons using the modulas alies name c.
+
+print(c.mul(50,30))
