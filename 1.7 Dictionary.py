@@ -1,16 +1,39 @@
 ''' Write a program to create a dictionary and
 demonstrate dictionary methods and iteration. '''
 
-Dictionary = {"name":"Dharmesh","age":21,"contect":"8200842477"}
+student = {
+    "Name": "Dharmesh",
+    "Age": 22,
+    "Course": "MCA",
+    "City": "Rajkot"
+}
 
-print(Dictionary)
+# Display dictionary
+print("Original Dictionary:", student)
 
-# access single element
+# Accessing values
+print("Name:", student["Name"])
 
-print(Dictionary["name"])
+# Dictionary methods
+print("\nDictionary Methods:")
+print("Keys:", student.keys())
+print("Values:", student.values())
+print("Items:", student.items())
 
-#loop with dictionary
+# Adding a new item
+student["College"] = "Saurashtra University"
+print("After Adding College:", student)
 
-for i in Dictionary:
-    print(Dictionary)
+# Updating a value
+student["Age"] = 23
+print("After Updating Age:", student)
+
+# Removing an item
+student.pop("City")
+print("After Removing City:", student)
+
+# Iteration through dictionary
+print("\nDictionary Iteration:")
+for key, value in student.items():
+    print(key, ":", value)
 
