@@ -13,7 +13,16 @@ print(roll_no)
 #imuatble
 #tuple
 
-ages = (20,21,30,40)
+tuple1 = (20,21,30,40)
 print(ages)
-ages[1] = 10 # throws error
-print(ages)
+
+# Creating a new tuple instead of modifying the existing tuple
+tuple1 = (100, 20, 30)
+print("New Tuple:", tuple1)
+
+# Immutable object - String
+text = "Python"
+print("\nOriginal String:", text)
+
+text = "Java"
+print("New String:", text)
