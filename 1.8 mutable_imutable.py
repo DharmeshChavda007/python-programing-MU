@@ -14,7 +14,7 @@ print(roll_no)
 #tuple
 
 tuple1 = (20,21,30,40)
-print(ages)
+print(tuple1)
 
 # Creating a new tuple instead of modifying the existing tuple
 tuple1 = (100, 20, 30)
