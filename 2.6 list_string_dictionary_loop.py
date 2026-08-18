@@ -19,5 +19,5 @@ print('========================================')
 # iterate dictioanry
 
 d = {'name':'Dharmesh' ,'age':20, 'mobile':8200842477}
-for i in d:
-    print(d)
+for key, value in d.items():
+    print(key, ":", value)
