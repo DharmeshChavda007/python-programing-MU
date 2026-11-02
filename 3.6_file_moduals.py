@@ -1,10 +1,29 @@
 #6. Write a program to perform file and directory operations using os and sys modules.
 import os
+import sys
 
-path = "/home/user/documents/sample.txt"
+# Display current working directory
+print("Current Directory:", os.getcwd())
 
-print(os.path.isfile(path))   # True if path is a file
-print(os.path.isdir(path))    # True if path is a directory
-print(os.path.isabs(path))    # True if path is an absolute path
-print(os.path.dirname(path))  # Returns the directory part
-print(os.path.basename(path)) # Returns the file name
+# Create a new directory
+os.mkdir("MyFolder")
+print("Directory Created Successfully")
+
+# Create a file
+file = open("MyFolder/demo.txt", "w")
+file.write("Welcome to Python Programming")
+file.close()
+print("File Created Successfully")
+
+# Display files and directories
+print("Directory Contents:", os.listdir("MyFolder"))
+
+# Rename the file
+os.rename("MyFolder/demo.txt", "MyFolder/newdemo.txt")
+print("File Renamed Successfully")
+
+# Display Python version using sys module
+print("Python Version:", sys.version)
+
+# Display platform information
+print("Operating System:", sys.platform)
