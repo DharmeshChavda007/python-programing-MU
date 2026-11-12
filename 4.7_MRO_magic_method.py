@@ -1,31 +1,51 @@
 #7. Write a program to illustrate method resolution order and magic methods.
 
-#MRO-method resolution order
-class TWD:
-    def alexandria(self):
-        print("Rick from alexandria ")
+# Demonstrating Method Resolution Order (MRO)
 
-class kingdom(TWD):
-    def alexandria(self):
-        print("this is king ezikial from kingdom")
+class A:
+    def show(self):
+        print("Class A method")
 
-class hilltop(kingdom):
-    def alexandria(self):
-        print("This is maggie from hilltop")
+class B(A):
+    def show(self):
+        print("Class B method")
+
+class C(A):
+    def show(self):
+        print("Class C method")
+
+class D(B, C):
+    pass
 
 
-glen = hilltop()
-glen.alexandria()   #it will start seraching for method in the main class from the object is created if it not found in that class then it will find in parent clas
+print("Method Resolution Order:")
+obj = D()
+obj.show()
 
-# magic fuctions
-class Number:
-    def __init__(self, value):
-        self.value = value
+print(D.mro())
 
-    def __add__(self, other):
-        return self.value + other.value
 
-n1 = Number(10)
-n2 = Number(20)
+# Demonstrating Magic Methods
 
-print(n1 + n2)
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        return f"Name: {self.name}, Age: {self.age}"
+
+    def __len__(self):
+        return len(self.name)
+
+    def __del__(self):
+        print("Student object destroyed")
+
+
+print("\nMagic Methods:")
+s1 = Student("Rahul", 21)
+
+print("Student Details:", s1)
+print("Length of Name:", len(s1))
+
+del s1
