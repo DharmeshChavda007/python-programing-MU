@@ -1,27 +1,42 @@
 #6. Write a program to demonstrate method overriding and polymorphism.
-
-#method overriding
-
-class textbooks:
-    def content(self):
-        print("this is the textbook class")
-
-class subject(textbooks):
-    def content(self):
-        super().content()
-        print("this is the subject class")
-        
-class maths(subject):
-    def content(self,a,b):
-        super().content()
-        print("content of maths class",a+b)
-
-obj1=maths()
-obj1.content(10,20)
+# Parent class
+class Animal:
+    def sound(self):
+        print("Animals make different sounds")
 
 
+# Child class 1
+class Dog(Animal):
+    def sound(self):
+        print("Dog barks")
 
-#-----------------------------------------------
 
-#polymorphism
+# Child class 2
+class Cat(Animal):
+    def sound(self):
+        print("Cat meows")
+
+
+# Creating objects
+a1 = Dog()
+a2 = Cat()
+
+# Method Overriding
+print("Method Overriding:")
+a1.sound()
+a2.sound()
+
+
+# Polymorphism
+print("\nPolymorphism:")
+
+animals = [Dog(), Cat()]
+
+for animal in animals:
+    animal.sound()
+
+
+
+
+
 
